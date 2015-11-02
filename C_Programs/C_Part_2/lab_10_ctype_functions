@@ -1,0 +1,176 @@
+// AUTHOR	:  Zackary Hermsen
+// DATE		:  03/19/2015
+// Course	:  Csci 281, Section A
+// File		:  lab_10_ctype_functions
+// Goal		:  To complete Lab 10.
+// Purpose	:  To experiment using the different types of functions in the ctype library.
+
+#include <stdio.h>
+
+#include <ctype.h>
+
+int main()
+{
+	int i;
+	char ch;
+	char my_char_variable;
+
+	//Experiment 1, print out the ASCII codes of every uppercase letter
+
+	printf("\n Experiment 1, print out the leter and ASCII codes of every uppercase letter.");
+	printf("\n");
+
+	for(i = 65; i <= 90; i++)
+	{
+		printf("\n %d  %c", i, i);
+	}
+
+	printf("\n");
+
+	//Experiment 2, print out the letter + ASCII code for every lowercase letter
+
+	printf("\n Experiment 2, print out the leter + ASCII code for every lowercase letter.");
+	printf("\n");
+
+	for(ch = 'a'; ch <= 'z'; ch++)
+	{
+		printf("\n %d  %c", ch, ch);
+	}
+
+	printf("\n");
+
+	//Experiment 3, print out the ASCII codes of every digit
+
+	printf("\n Experiment 3, print out the ASCII codes of every digit.");
+	printf("\n");
+
+	for(i = 0; i <= 127; i++)
+	{
+		if(isdigit(i))
+		{
+			printf("\n %d  %c", i, i);
+		}
+	}
+
+	printf("\n");
+
+	//Experiment 4, print out the ASCII codes of every letter/digit
+
+	printf("\n Experiment 4, print out the ASCII codes of every letter/digit.");
+	printf("\n");
+
+	for(i = 0; i <= 127; i++)
+	{
+		if(isalnum(i))
+		{
+			printf("\n %d  %d", i, i);
+		}
+	}
+
+	printf("\n");
+
+	//Experiment 5, input a letter, and print its uppercase version
+
+	printf("\n Experiment 5");
+	printf("\n");
+
+	fflush(stdin);
+	printf("\n Please enter a character variable, and I will convert it to uppercase,\n if necessary : ");
+	scanf_s("%c", &my_char_variable);
+	printf("\n The varible, in uppercase form, is %c", toupper(my_char_variable));
+
+	printf("\n");
+
+	//Experiment 6, print all lowercase letters
+
+	printf("\n Experiment 6, print all lowercase letters.");
+	printf("\n");
+
+	for(i = 0; i <= 127; i++)
+	{
+		if(islower(i))
+		{
+			printf("\n %d  %c", i, i);
+		}
+	}
+
+	printf("\n");
+
+	//Experiment 7, print all uppercase letters
+
+	printf("\n Experiment 7, print all uppercase letters.");
+	printf("\n");
+
+	for(i = 0; i <= 127; i++)
+	{
+		if(isupper(i))
+		{
+			printf("\n %d  %c", i, i);
+		}
+	}
+
+	printf("\n");
+
+	//Experiment 8, print all the alphanumeric characters
+
+	printf("\n Experiment 8, print all the alphanumeric characters.");
+	printf("\n");
+
+	for(i = 0; i <= 127; i++)
+	{
+		if(isalnum(i))
+		{
+			printf("\n %d  %c", i, i);
+		}
+	}
+
+	printf("\n");
+
+	//Experiment 9, print all white space characters
+
+	printf("\n Experiment 9, print all white space characters.");
+	printf("\n");
+
+	for(i = 0; i <= 127; i++)
+	{
+		if(isspace(i))
+		{
+			printf("\n %d  %c", i, i);
+		}
+	}
+
+	printf("\n");
+
+	//Experiment 10, print all punctuation characters
+
+	printf("\n Experiment 10, print all punctuation characters.");
+	printf("\n");
+
+	for(i = 0; i <= 127; i++)
+	{
+		if(ispunct(i))
+		{
+			printf("\n %d  %c", i, i);
+		}
+	}
+
+	printf("\n");
+
+	//Experiment 11, print all printable characters
+
+	printf("\n Experiment 11, print all printable characters.");
+	printf("\n");
+
+	for(i = 0; i <= 127; i++)
+	{
+		if(isprint(i))
+		{
+			printf("\n %d  %c", i, i);
+		}
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
