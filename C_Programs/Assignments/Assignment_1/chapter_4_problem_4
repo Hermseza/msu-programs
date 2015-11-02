@@ -1,0 +1,43 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-10(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_4_problem_4
+// Goal		:  To complete problem 4 for chapter 4.
+// Purpose	:  to change the input integer into an octal integer.
+
+#include <stdio.h>
+
+int main()
+{
+	int n; //the input number we will manipulate
+	int backup_copy_of_n; //the original input
+	int octal; //the input number converted into octal
+	int digit; //the remainder digit of n when we calculate
+	int position; //the 10's place for the octal we are calculating
+
+	//get input from user
+	printf("Enter a number between 0 and 32767 : ");
+	scanf_s("%d", &n);
+
+	//set up the integers
+	backup_copy_of_n = n;
+	octal = 0;
+	position = 1;
+
+	//manipulate integers to find the octal number
+	while (n != 0)
+	{
+		digit = n % 8;
+		octal = octal + digit * position;
+		position = position * 10;
+		n = n / 8;
+	}
+
+	//print results
+	printf("\nIn octal, your number, %d, is %.5d", backup_copy_of_n, octal);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
