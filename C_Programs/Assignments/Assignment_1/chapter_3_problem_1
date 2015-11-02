@@ -1,0 +1,27 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-10(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_3_problem_1
+// Goal		:  To complete problem 1 in chapter 3
+// Purpose	:  the display a date inputted by the user in a different format.
+
+#include <stdio.h>
+
+int main()
+{
+	int month;  //the input month
+	int day;    //the input day
+	int year;   //the input year
+
+	//get input from user
+	printf("\nEnter a date (mm/dd/yyyy) : ");
+	scanf_s("%d/%d/%d", &month, &day, &year);
+	
+	//print the input in specified format
+	printf("\nYou entered the date %d%.2d%.2d", year, month, day);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
