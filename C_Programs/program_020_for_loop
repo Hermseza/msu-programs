@@ -1,0 +1,24 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  10(October)-22(Wednesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_020_for_loop
+// Goal		:  To complete Lab 20.
+// Purpose	:  To understand how to use a for loop, which is a more concise version of a while loop.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+
+	for (i = 1; i <= 10; i = i + 1)
+	{
+		printf("%d", i);
+		printf("\n");
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
