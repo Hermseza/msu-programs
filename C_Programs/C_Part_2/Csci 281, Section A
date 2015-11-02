@@ -1,0 +1,77 @@
+//	AUTHOR	:  Zackary Hermsen
+//  DATE	:  02/05/15
+//  File	:  lab_02_palindromes
+//  Course	:  Csci 281, Section A
+//  Purpose	:  To get the first 1000 palindromes using get_reverse() and is_palindrome() functions
+
+#include <stdio.h>
+
+int is_palindrome(int n);
+
+int get_reverse(int n);
+
+int main()
+{
+	// PART 1
+	// Get the first 1000 palindromes in an array
+
+	int palindromes[1000];
+
+	int count = 0;
+
+	int n = 1;
+
+	int i;
+
+	while(count <= 999)
+	{
+		if(is_palindrome(n) == 1)
+		{
+			palindromes[count] = n;
+			n++;
+			count++;
+		}
+		else
+		{
+			n++;
+		}
+	}
+
+	for(i = 0; i <= 999; i++)
+	{
+		printf("\ni - %d, %d", i, palindromes[i]);
+	}
+
+	getchar();
+	getchar();
+	
+	return 0;
+}
+
+int get_reverse(int n)
+{
+	int digit;
+
+	int rev = 0;
+
+	while(n != 0)
+	{
+		digit = n % 10;
+		rev = rev * 10 + digit;
+		n = n / 10;
+	}
+	return rev;
+}
+
+int is_palindrome(int n)
+{
+	if(n == get_reverse(n))
+	{
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
+
