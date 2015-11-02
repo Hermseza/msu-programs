@@ -1,0 +1,16 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  09(September)-15(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_001_hello_world
+// Goal		:  To complete Lab 1.
+// Purpose	:  To use the printf fuction.
+
+#include <stdio.h>
+
+int main()
+{
+	printf("\n Hello, world!");
+	getchar();
+	getchar();
+	return 0;
+}
