@@ -1,0 +1,34 @@
+// AUTHOR	: Zack Hermsen
+// DATE		: 09(September)-26(Friday)-2014
+// Course	: Csci 180, Section A
+// File		: program_008_pythagorean_triplet
+// Goal		: To complete Lab 8, to see if three sides form a right triangle
+// Purpose	: 1) To understand how to use an IF statement to solve problems in GEOMETRY
+//				2) To scan in multiple values in one scanf() statement
+
+#include <stdio.h>
+
+int main()
+{
+	int a; // smallest side
+	int b; // second side
+	int c; // largest side of triangle
+
+	printf("\n Please enter 3 sides of triangle in ascending order : ");
+	scanf_s("%d %d %d", &a, &b, &c);
+	
+	if (a * a + b * b == c * c)
+	{
+		printf("\n These sides %d, %d, and %d form a pythagorean triplet", a, b, c);
+		printf("\n These sides form a right angled triangle");
+	}
+	else
+	{
+		printf("\n These sides %d, %d, and %d DO NOT form a pythagorean triplet", a, b, c);
+		printf("\n These sides DO NOT form a right angled triangle");
+	}
+
+	getchar();
+	getchar();
+	return 0;
+}
