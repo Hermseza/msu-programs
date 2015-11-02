@@ -1,0 +1,55 @@
+// AUTHOR	: Zackary Hermsen
+// DATE		: 04/15/2015
+// FILE		: chapter_8_problem_5
+// COURSE	: CSCI 281, Section A
+// GOAL		: To complete problem 5.
+// PURPOSE	: To display interest rates that are compounded by month instead of by year in the same format.
+
+
+#include <stdio.h>
+
+
+//defining the variables we will use
+#define NUM_RATES ((int) sizeof(value) / sizeof(value[0]))
+#define INITIAL_BALANCE 100.00
+
+int main(void)
+{
+	//initializing the variables we will use
+	int i, low_rate, num_years, year;
+	double value[5];
+
+	//inputting interest rate and number of years
+	printf("\n Enter interest rate: ");
+	scanf_s("%d", &low_rate);
+	
+	printf("\n Enter number of years: ");
+	scanf_s("%d", &num_years);
+
+	printf("\nYears");
+
+	//printing the interest rates we will be calculating for
+	for (i = 0; i < NUM_RATES; i++)
+	{
+		printf("%9d%%", low_rate + i);
+		value[i] = INITIAL_BALANCE;
+	}
+	printf("\n");
+
+	//increasing the interest by year and printing it
+	for (year = 1; year <= num_years; year++)
+	{
+		printf("%3d    ", year);
+		for (i = 0; i < NUM_RATES; i++)
+		{
+			//compounding the rates by month instead of by year (multiplying the yearly interest rate by 12)
+			value[i] += 12 * ((low_rate + i) / 100.0 * value[i]);
+			printf("%10.2f", value[i]);
+		}
+		printf("\n");
+	}
+	getchar();
+	getchar();
+	
+	return 0;
+}
