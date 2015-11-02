@@ -1,0 +1,26 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  10(October)-31(Friday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_028_i_isquare_icube_while
+// Goal		:  To complete Lab 28.
+// Purpose	:  To use a while loop to show i, i squared, and i cubed.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	i = 1;
+
+	while(i <=10)
+	{
+		printf("%5d %5d %5d", i, i * i, i * i * i);
+		printf("\n");
+		i++;
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
