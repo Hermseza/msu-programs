@@ -1,0 +1,37 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  03(Monday)-11(November)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_039_nested_loop_$$$$$_do_while
+// Goal		:  To complete Lab 39.
+// Purpose	:  To put a do while loop with variable j inside of a do while loop
+//				with variable i to print $$$$$.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	int j;
+
+	i = 1;
+
+	do
+	{
+		j = 1;
+		do
+		{
+			printf("$");
+			j++;
+		}
+		while(j <= 5);
+
+		printf("\n");
+		i++;
+	}
+	while(i <= 10);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
