@@ -1,0 +1,24 @@
+// AUTHOR	:  Zackary Hermsen
+// DATE		:  10(October)-27(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_026_i_isquare_for
+// Goal		:  To complete Lab 26.
+// Purpose	:  To practice using a for loop.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+
+	for(i = 1; i <= 10; i++)
+	{
+		printf("%5d %5d \n", i, i * i);
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+	
+}
