@@ -1,0 +1,25 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-10(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_3_problem_4
+// Goal		:  To complete problem 4 for chapter 3.
+// Purpose	:  to change the format of an inputted telephone number.
+
+#include <stdio.h>
+
+int main()
+{
+	int part1;
+	int part2;
+	int part3;
+
+	printf("Enter phone number [(xxx) xxx-xxxx] : ");
+	scanf_s("(%d) %d-%d", &part1, &part2, &part3);
+
+	printf("\nYou entered %d.%d.%d", part1, part2, part3);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
