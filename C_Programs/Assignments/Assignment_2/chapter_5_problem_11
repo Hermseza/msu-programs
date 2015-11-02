@@ -1,0 +1,181 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  12(December)-01(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_5_problem_11
+// Goal		:  To complete problem 11 in chapter 5.
+// Purpose	:  To convert a given number into its english counterpart.
+
+#include <stdio.h>
+
+int main()
+{
+	int first;
+	int second;
+
+	printf("\nEnter a two-digit number : ");
+	scanf_s("%1d%1d", &first, &second);
+
+	if(first == 0)
+	{
+		if(second == 0)
+		{
+			printf("\nYou entered the number zero.");
+		}
+		else if(second == 1)
+		{
+			printf("\nYou entered the number one.");
+		}
+		else if(second == 2)
+		{
+			printf("\nYou entered the number two.");
+		}
+		else if(second == 3)
+		{
+			printf("\nYou entered the number three.");
+		}
+		else if(second == 4)
+		{
+			printf("\nYou entered the number four.");
+		}
+		else if(second == 5)
+		{
+			printf("\nYou entered the number five.");
+		}
+		else if(second == 6)
+		{
+			printf("\nYou entered the number six.");
+		}
+		else if(second == 7)
+		{
+			printf("\nYou entered the number seven.");
+		}
+		else if(second == 8)
+		{
+			printf("\nYou entered the number eight.");
+		}
+		else
+		{
+			printf("\nYou entered the number nine.");
+		}
+	}
+	else if(first == 1)
+	{
+		if(second == 0)
+		{
+			printf("\nYou entered the number ten.");
+		}
+		else if(second == 1)
+		{
+			printf("\nYou entered the number eleven.");
+		}
+		else if(second == 2)
+		{
+			printf("\nYou entered the number twelve.");
+		}
+		else if(second == 3)
+		{
+			printf("\nYou entered the number thirteen.");
+		}
+		else if(second == 4)
+		{
+			printf("\nYou entered the number fourteen.");
+		}
+		else if(second == 5)
+		{
+			printf("\nYou entered the number fifteen.");
+		}
+		else if(second == 6)
+		{
+			printf("\nYou entered the number sixteen.");
+		}
+		else if(second == 7)
+		{
+			printf("\nYou entered the number seventeen.");
+		}
+		else if(second == 8)
+		{
+			printf("\nYou entered the number eighteen.");
+		}
+		else
+		{
+			printf("\nYou entered the number nineteen.");
+		}
+	}
+
+	else
+	{
+
+		switch (first)
+		{
+		case 9:
+			printf("\nYou entered the number ninety");
+			break;
+		case 8:
+			printf("\nYou entered the number eighty");
+			break;
+		case 7:
+			printf("\nYou entered the number seventy");
+			break;
+		case 6:
+			printf("\nYou entered the number sixty");
+			break;
+		case 5:
+			printf("\nYou entered the number fifty");
+			break;
+		case 4:
+			printf("\nYou entered the number forty");
+			break;
+		case 3:
+			printf("\nYou entered the number thirty");
+			break;
+		case 2:
+			printf("\nYou entered the number twenty");
+			break;
+		case 1:
+			break;
+		case 0:
+			break;
+		default:
+			printf("\nThe number you entered is not valid.");
+		}
+
+		switch (second)
+		{
+		case 9:
+			printf("-nine.");
+			break;
+		case 8:
+			printf("-eight.");
+			break;
+		case 7:
+			printf("-seven.");
+			break;
+		case 6:
+			printf("-six.");
+			break;
+		case 5:
+			printf("-five.");
+			break;
+		case 4:
+			printf("-four.");
+			break;
+		case 3:
+			printf("-three.");
+			break;
+		case 2:
+			printf("-two.");
+			break;
+		case 1: 
+			printf("-one.");
+			break;
+		default:
+			printf(".");
+		}
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+
+}
