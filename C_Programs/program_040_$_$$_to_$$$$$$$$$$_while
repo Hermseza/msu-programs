@@ -1,0 +1,35 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-04(Tuesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_040_$_$$_to_$$$$$$$$$$_while
+// Goal		:  To complete Lab 40
+// Purpose	:  To use a while loop inside of a while loop to display a $ where j = i.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	int j;
+
+	i = 1;
+
+	while(i <= 10)
+	{
+		j = 1;
+
+		while(j <= i)
+		{
+			printf("$");
+			j++;
+		}
+
+		printf("\n");
+		i++;
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
