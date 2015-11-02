@@ -1,0 +1,43 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-14(Friday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_047_palindrome
+// Goal		:  To complete Lab 47.
+// Purpose	:  To test whether or not an input is a palindrome (if the reverse is equal to the given input).
+
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	int backup_copy_of_n;
+	int digit;
+	int reverse;
+
+	printf("\nPlease enter an integer : ");
+	scanf_s("%d", &n);
+
+	backup_copy_of_n = n;
+	reverse = 0;
+
+	while(n != 0)
+	{
+		digit = n % 10;
+		reverse = reverse * 10 + digit;
+		n = n / 10;
+	}
+
+	if(reverse == backup_copy_of_n)
+	{
+		printf("\n%d is a palindrome.", backup_copy_of_n);
+	}
+	else
+	{
+		printf("\n%d is NOT a palindrome.", backup_copy_of_n);
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
