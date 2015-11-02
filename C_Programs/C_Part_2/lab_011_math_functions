@@ -1,0 +1,60 @@
+// AUTHOR	:  Zackary Hermsen
+// DATE		:  03/26/2015
+// Course	:  Csci 281, Section A
+// File		:  lab_011_math_functions
+// Goal		:  To complete Lab 11.
+// Purpose	:  To use math functions practically with a given input.
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+{
+	int choice;
+
+	double radians;
+	double degrees;
+
+	double x;
+
+	printf("\n Please enter 1 for degrees and 2 for entering a value in radians : ");
+	scanf_s("%d", &choice);
+	
+	if (choice == 1)
+	{
+		printf("\n Please enter an angle in degrees : ");
+		scanf_s("%lf", &degrees);
+	}
+
+	else if (choice == 2)
+	{
+		printf("\n Please enter an angle in radians : ");
+		scanf_s("%lf", &radians);
+	}
+
+	if (choice == 1)
+	{
+		radians = (3.1415926 / 180) * degrees;
+	}
+
+	printf("\n The sine of the angle you entered is : %lf", sin(radians) );
+
+	printf("\n The cosine of the angle you entered is : %lf", cos(radians) );
+
+	printf("\n The tangent of the angle you entered is : %lf", tan(radians) );
+
+	// Log functions experiment
+
+	printf("\n");
+
+	printf("\n Please enter a number in base e : ");
+	scanf_s("%lf", &x);
+
+	printf("\n The logarithm of %lf to the base e is : %lf", x, log(x) );
+
+	getchar();
+	getchar();
+
+	return 0;
+}
