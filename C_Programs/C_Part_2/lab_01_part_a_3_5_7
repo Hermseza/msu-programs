@@ -1,0 +1,28 @@
+// AUTHOR	: Zackary Hermsen
+// DATE		: 01/29/15
+// Course	: Csci 281, Section A
+// File		: lab_01_part_a_3_5_7
+// Purpose	: To review a problem from the final, which dealt with a number that is a multiple of 5 and 7, but not 5
+
+#include <stdio.h>
+
+int main()
+{
+	int count = 0;
+	int i = 1;
+
+	while(count < 100)
+	{
+		if((i % 3 == 0) && (i % 5 != 0) && (i % 7 == 0))
+		{
+			printf("%d\n", i);
+			count++;
+		}
+		i++;
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
