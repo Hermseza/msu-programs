@@ -1,0 +1,24 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  10(October)-31(Friday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_029_i_isquare_icube_for
+// Goal		:  To complete Lab 29.
+// Purpose	:  To use a for loop to display i, i squared, and i cubed.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+
+	for(i = 1; i <= 10; i++)
+	{
+		printf("%5d %5d %5d", i, i * i, i * i * i);
+		printf("\n");
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
