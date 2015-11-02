@@ -1,0 +1,34 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-18(Tuesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_048_array_sum_of_5_numbers
+// Goal		:  To complete Lab 48
+// Purpose	:  To understand how to input 5 integers into an array, and to find their sum
+
+
+#include <stdio.h>
+
+int main()
+{
+	int a[5];
+	int i;
+	int sum = 0;
+
+	for(i = 0; i <= 4; i++)
+	{
+		printf("\n Please enter element a[%d] : ", i);
+		scanf_s("%d", &a[i]);
+	}
+
+	for(i = 0; i <= 4; i++)
+	{
+		sum += a[i];
+	}
+
+	printf("\n The sum of the numbers you just entered is %d", sum);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
