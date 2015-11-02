@@ -1,0 +1,49 @@
+// AUTHOR	:  Zackary Hermsen
+// DATE		:  02/02/15
+// Course	:  Csci 281, Section A
+// File		:  lab_01_part_b_1000_primes_with_function
+// Pupose	:  To test whether a number is prime and to print the first 1000 prime numbers with a function.
+
+#include <stdio.h>
+
+int is_prime(int n);
+
+int main()
+{
+	int n = 1;
+	int count = 0;
+	while(count < 1000)
+	{
+		if(is_prime(n) == 1)
+		{
+			printf("%d\n", n);
+			n++;
+			count++;
+		}
+		else
+		{
+			n++;
+		}
+	}
+	getchar();
+	getchar();
+
+	return 0;
+}
+
+int is_prime(int n)
+{
+	int i;
+	int num_of_factors = 0;
+	for(i = 1; i <= n; i++)
+	{
+		if(n % i == 0)
+		{
+			num_of_factors++;
+		}
+	}
+	if(num_of_factors == 2)
+		return 1;
+	else
+		return 0;
+}
