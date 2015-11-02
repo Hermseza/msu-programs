@@ -1,0 +1,27 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  12(December)-01(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_6_problem_6
+// Goal		:  To complete problem 6 in chapter 6
+// Purpose	:  To display all of the even squares between 1 and a given number.
+
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	int i;
+
+	printf("\n Please enter a number : ");
+	scanf_s("%d", &n);
+
+	for(i = 2; i * i <= n; i += 2)
+	{
+		printf("\n %d", i * i);
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
