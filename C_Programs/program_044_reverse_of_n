@@ -1,0 +1,37 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-10(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_044_reverse_of_n
+// Goal		:  To complete Lab 44.
+// Purpose	:  To print out the integers of the input in reverse order.
+
+#include <stdio.h>
+
+int main()
+{
+	int n; //the number we want to reverse
+	int backup_copy_of_n; //the original input number
+	int reverse; //the reverse we are carefully building
+	int digit; //digits extracted from n, one at a time
+
+
+	printf("Please enter an integer : ");
+	scanf_s("%d", &n);
+
+	reverse = 0;
+	backup_copy_of_n = n;
+
+	while(n != 0)
+	{
+		digit = n % 10;
+		reverse = reverse * 10 + digit;
+		n = n / 10;
+	}
+
+	printf("\nThe reverse of %d is %d.", backup_copy_of_n, reverse);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
