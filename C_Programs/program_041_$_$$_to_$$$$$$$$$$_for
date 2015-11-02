@@ -1,0 +1,29 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-04(Tuesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_041_$_$$_to_$$$$$$$$$$_for
+// Goal		:  To complete Lab 41
+// Purpose	:  To use a for loop inside of a for loop to display a $ where j = i.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	int j;
+
+	for(i = 1; i <= 10; i++)
+	{
+		for(j = 1; j <= i; j++)
+		{
+			printf("$");
+		}
+
+		printf("\n");
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
