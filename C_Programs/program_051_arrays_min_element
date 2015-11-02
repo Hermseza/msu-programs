@@ -1,0 +1,38 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-19(Wednesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_051_arrays_min_element
+// Goal		:  To complete Lab 51
+// Purpose	:  To use arrays, for loops, and if statements efficiently.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	int a[10];
+	int min;
+
+	for(i = 0; i <= 9; i++)
+	{
+		printf("\n Please enter element a[%d] : ", i);
+		scanf_s("%d", &a[i]);
+	}
+
+	min = a[0];
+
+	for(i = 1; i <= 9; i++)
+	{
+		if(a[i] < min)
+		{
+			min = a[i];
+		}
+	}
+
+	printf("\n The minimum value is : %d.", min);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
