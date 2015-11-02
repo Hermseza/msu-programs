@@ -1,0 +1,239 @@
+// AUTHOR	:  Zackary Hermsen
+// DATE		:  04-28-2015
+// Course	:  CSCI 281, Section A
+// File		:  lab_012_ternary_operator
+// Goal		:  To complete Lab 12.
+// Purpose	:  To see the how a ternary operator works and how it compares to an if-else statement.
+
+#include <stdio.h>
+
+int main()
+{
+	//The variables we will use for the program
+
+	int a;
+	int b;
+	int c;
+	int max;
+	int min;
+	int hrs_per_week;
+	int bonus;
+	int salary;
+
+	//Problem 1: Input 2 integers and print their MAX
+
+	//with an if-else
+
+	printf("\n Please enter two integers, and I will find their max using an if-else\n statement: ");
+	scanf_s("%d %d", &a, &b);
+
+	if (a > b)
+	{
+		max = a;
+		printf("\n %d is the max.", max);
+	}
+	else
+	{
+		max = b;
+		printf("\n %d is the max.", max);
+	}
+
+	printf("\n");
+
+	//with a ternary operator
+
+	printf("\n Please enter two integers, and I will find their max using\n the ternary operator: ");
+	scanf_s("%d %d", &a, &b);
+
+	max = (a > b) ? a : b;
+	printf("\n %d is the max.", max);
+
+	printf("\n");
+
+	//Problem 2: Input 2 integers and print their MIN
+
+	//with an if-else
+
+	printf("\n Please enter two integers, and I will find their min using an if-else\n statement: ");
+	scanf_s("%d %d", &a, &b);
+
+	if (a < b)
+	{
+		min = a;
+		printf("\n %d is the min.", min);
+	}
+	else
+	{
+		min = b;
+		printf("\n %d is the min.", min);
+	}
+
+	printf("\n");
+
+	//with a ternary operator
+
+	printf("\n Please enter two integers, and I will find their min using\n the ternary operator: ");
+	scanf_s("%d %d", &a, &b);
+
+	min = (a < b) ? a : b;
+	printf("\n %d is the min.", min);
+
+	printf("\n");
+
+	//Problem 3: Input 3 different integers and print their MAX
+
+	//with an if-else
+
+	printf("\n Please enter three integers, and I will find their max using an if-else\n statement: ");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	if (a > b)
+	{
+		if (a > c)
+		{
+			max = a;
+			printf("\n %d is the max.", max);
+		}
+		else
+		{
+		max = c;
+		printf("\n %d is the max.", max);
+		}
+	}
+	else
+	{
+		if (b > c)
+		{
+			max = b;
+			printf("\n %d is the max.", max);
+		}
+		else
+		{
+			max = c;
+			printf("\n %d is the max.", max);
+		}
+	}
+
+	printf("\n");
+
+	//with a ternary operator
+
+	printf("\n Please enter three integers, and I will find their max using\n the ternary operator: ");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	max = (a > b) ? ( (a > c) ? a : c ) : ( (b > c) ? b : c );
+	printf("\n %d is the max.", max);
+
+	printf("\n");
+
+	//Problem 4: Input 3 different integers and print their MIN
+
+	//with an if-else
+
+	printf("\n Please enter three integers, and I will find their min using an if-else\n statement: ");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	if (a < b)
+	{
+		if (a < c)
+		{
+			min = a;
+			printf("\n %d is the min.", min);
+		}
+		else
+		{
+		min = c;
+		printf("\n %d is the min.", min);
+		}
+	}
+	else
+	{
+		if (b < c)
+		{
+			min = b;
+			printf("\n %d is the min.", min);
+		}
+		else
+		{
+			min = c;
+			printf("\n %d is the min.", min);
+		}
+	}
+
+	printf("\n");
+
+	//with a ternary operator
+
+	printf("\n Please enter three integers, and I will find their min using\n the ternary operator: ");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	max = (a < b) ? ( (a < c) ? a : c ) : ( (b < c) ? b : c );
+	printf("\n %d is the min.", min);
+
+	printf("\n");
+
+	//Problem 5: Calculate bonus.
+
+	//with an if-else
+
+	printf("\n Please enter number of hours worked per week, and I will\n calculate the bonus using an if-else statement: ");
+	scanf_s("%d", &hrs_per_week);
+
+	if (hrs_per_week > 30)
+	{
+		bonus = 100;
+		printf("\n The bonus of the employee is $%d.", bonus);
+	}
+	else
+	{
+		bonus = 20;
+		printf("\n The bonus of the employee is $%d.", bonus);
+	}
+
+	printf("\n");
+
+	//with a ternary operator
+
+	printf("\n Please enter number of hours worked per week, and I will\n calculate the bonus using the ternary operator: ");
+	scanf_s("%d", &hrs_per_week);
+
+	bonus = (hrs_per_week > 30) ? 100 : 20;
+	printf("\n The bonus of the employee is $%d.", bonus);
+
+	printf("\n");
+
+	//Problem 6: Calculate salary.
+
+	//with an if-else
+
+	printf("\n Please enter number of hours worked per week, and I will\n calculate the salary using an if-else statement: ");
+	scanf_s("%d", &hrs_per_week);
+
+	if (hrs_per_week > 30)
+	{
+		salary = 100 + (hrs_per_week * 15.10);
+		printf("\n The salary of the employee is $%d.", salary);
+	}
+	else
+	{
+		salary = 50 + (hrs_per_week * 12.10);
+		printf("\n The salary of the employee is $%d.", salary);
+	}
+
+	printf("\n");
+
+	//with a ternary operator
+
+	printf("\n Please enter number of hours worked per week, and I will\n calculate the bonus using the ternary operator: ");
+	scanf_s("%d", &hrs_per_week);
+
+	bonus = (hrs_per_week > 30) ? (100 + (hrs_per_week * 15.10)) : (50 + (hrs_per_week * 12.10));
+	printf("\n The salary of the employee is $%d.", salary);
+
+	printf("\n");
+
+	getchar();
+	getchar();
+
+	return 0;
+}
