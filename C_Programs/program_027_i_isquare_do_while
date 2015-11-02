@@ -1,0 +1,28 @@
+// AUTHOR	:  Zackary Hermsen
+// DATE		:  10(October)-27(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_027_i_isquare_do_while
+// Goal		:  To complete Lab 27.
+// Purpose	:  To practice using a do while loop.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+
+	i = 1;
+
+	do
+	{
+		printf("%5d %5d \n", i, i * i);
+		i = i + 1;
+	}
+	while (i <= 10);
+
+	getchar();
+	getchar();
+
+	return 0;
+	
+}
