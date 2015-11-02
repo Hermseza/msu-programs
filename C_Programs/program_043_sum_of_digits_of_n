@@ -1,0 +1,36 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-07(Friday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_043_sum_of_digits_of_n
+// Goal		:  To complete Lab 43.
+// Purpose	:  To use a while loop to break down a number into its digits and display the sum of the digits.
+
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	int backup_copy_of_n;
+	int sum_of_digits;
+	int digit;
+
+	printf("Please enter an integer : ");
+	scanf_s("%d", &n);
+
+	sum_of_digits = 0;
+	backup_copy_of_n = n;
+
+	while(n != 0)
+	{
+		digit = n % 10;
+		sum_of_digits += digit;
+		n = n / 10;
+	}
+
+	printf("\nThe sum of the digits in %d is %d.", backup_copy_of_n, sum_of_digits);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
