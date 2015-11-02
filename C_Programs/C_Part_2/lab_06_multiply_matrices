@@ -1,0 +1,63 @@
+// AUTHOR	:  Zackary Hermsen
+// DATE		:  03-05-2015
+// Course	:  Csci 281, Section A
+// File		:  lab_06_multiply_matrices
+// Goal		:  To complete Lab 6.
+// Purpose	:  To create two matrices and then add them together.
+
+#include <stdio.h>
+
+void print_matrix(int A[3][3]);
+
+int main()
+{
+	int A[3][3] = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
+	int B[3][3] = { {1, 1, 1}, {2, 2, 2}, {3, 3, 3} };
+	int C[3][3];
+
+	int i;
+	int j;
+	int k;
+
+	for(i = 0; i <= 2; i++)
+	{
+		for(j = 0; j <= 2; j++)
+		{
+			C[i][j] = 0;
+			for(k = 0; k <= 2; k++)
+			{
+				C[i][j] = C[i][j] + A[i][k] * B[k][j];
+			}
+		}
+	}
+
+	printf("\nThe first input matrix is as follows : ");
+	print_matrix(A);
+
+	printf("\nThe second input matrix is as follows : ");
+	print_matrix(B);
+
+	printf("\nThe result input matrix is as follows : ");
+	print_matrix(C);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
+
+void print_matrix(int A[3][3])
+{
+	int i;
+	int j;
+
+	for (i = 0; i <= 2; i++)
+	{
+		printf("\n");
+
+		for (j = 0; j <= 2; j++)
+		{
+			printf("%5d", A[i][j]);
+		}
+	}
+}
