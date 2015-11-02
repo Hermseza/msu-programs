@@ -1,0 +1,37 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-11(Tuesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_045_octal
+// Goal		:  To complete one of the problems on the homework assignment
+// Purpose	:  To understand how to convert a number from decimal to octal
+
+#include <stdio.h>
+
+int main()
+{
+	int n; 
+	int backup_copy_of_n; 
+	int octal = 0; 
+	int digit;
+	int position = 1;
+
+	printf("\nPlease enter the value of n : ");
+	scanf_s("%d", &n);
+
+	backup_copy_of_n = n;
+
+	while (n != 0)
+	{
+		digit = n % 8;
+		octal = octal + digit * position;
+		position = position * 10;
+		n = n / 8;
+	}
+
+	printf("\nIn octal, your number, %d, is %.5d", backup_copy_of_n, octal);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
