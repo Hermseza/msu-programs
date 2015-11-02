@@ -1,0 +1,41 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-12(Wednesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_046_prime_or_composite
+// Goal		:  To complete Lab 46.
+// Purpose	:  To test whether a number is prime or composite using an if loop and a while loop
+
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	int i = 1;
+	int num_of_factors = 0;
+
+	printf("\nPlease enter an integer : ");
+	scanf_s("%d", &n);
+
+	while(i <= n)
+	{
+		if(n % i == 0)
+		{
+			num_of_factors++;
+		}
+		i++;
+	}
+
+	if(num_of_factors == 2)
+	{
+		printf("\n%d is prime", n);
+	}
+	else
+	{
+		printf("\n%d is composite", n);
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
