@@ -1,0 +1,45 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  12(December)-01(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_6_problem_8
+// Goal		:  To complete problem 8 in chapter 6.
+// Purpose	:  To display a calendar with the correct number of days and a specific starting day.
+
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	int i;
+	int first_day;
+
+	printf("\n Enter number of days in month : ");
+	scanf_s("%d", &n);
+
+	printf("\n Enter starting day of the week (1 = Sun, 7 = Sat) : ");
+	scanf_s("%d", &first_day);
+
+	printf("\n");
+
+	for(i = 1; i < first_day; i++)
+	{
+		printf("   ");
+	}
+
+	for(i = 1; i <= n; i++)
+	{
+		if((first_day + i - 1) % 7 == 0)
+		{
+			printf("%3d\n", i);
+		}
+		else
+		{
+			printf("%3d", i);
+		}
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
