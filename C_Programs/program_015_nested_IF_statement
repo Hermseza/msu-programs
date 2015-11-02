@@ -1,0 +1,49 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  10(October)-06(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_015_nested_IF_statement
+// Goal		:  To complete Lab 15
+// Purpose	:  To use nested if statements
+
+#include <stdio.h>
+
+int main()
+{
+	int age;
+
+	printf("\n Please enter your age : ");
+	scanf_s("%d", &age);
+
+	if (age >= 18)
+	{
+		printf("\n You can vote in elections.");
+		printf("\n You can buy cigarettes.");
+		printf("\n You can marry.");
+		if (age >= 21)
+		{
+			printf("\n You can buy a drink.");
+			printf("\n You can gamble.");
+			if (age >= 25)
+			{
+				printf("\n You can rent a car.");
+				printf("\n You can run for the US House of Representatives.");
+				if (age >= 30)
+				{
+					printf("\n You can run for the Senate.");
+					if (age >= 35)
+					{
+						printf("\n You can run for office to be the President.");
+					}
+				}
+			}
+		}
+	}
+	else
+	{
+		printf("\n Stay at home, kid.");
+	}
+
+	getchar();
+	getchar();
+	return 0; 
+}
