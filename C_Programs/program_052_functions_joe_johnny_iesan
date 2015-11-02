@@ -1,0 +1,58 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-21(Friday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_052_functions_joe_johnny_iesan
+// Goal		:  To complete Lab 52.
+// Purpose	:  To create and call functions
+
+#include <stdio.h>
+
+void joe_print();
+void johnny_print();
+void iesan_print();
+void zack_print();
+
+int main()
+{
+	joe_print();
+	printf("\n");
+	johnny_print();
+	printf("\n");
+	iesan_print();
+	printf("\n");
+	zack_print();
+
+	getchar();
+	getchar();
+
+	return 0;
+}
+
+void joe_print()
+{
+	printf("\n Joe cares for others.");
+	printf("\n Joe is smart.");
+	printf("\n Joe is willing to help others.");
+}
+
+void johnny_print()
+{
+	printf("\n Jonny is good at Math.");
+	printf("\n Johnny is a good waiter.");
+	printf("\n Jonny is nice to people.");
+}
+
+void iesan_print()
+{
+	printf("\n Iesan is optimistic.");
+	printf("\n Iesan plays the guitar.");
+	printf("\n Iesan cares for his friends.");
+}
+
+void zack_print()
+{
+	printf("\n Zack is smart.");
+	printf("\n Zack is funny.");
+	printf("\n Zack is nice.");
+}
+
