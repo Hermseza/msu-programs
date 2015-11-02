@@ -1,0 +1,78 @@
+// AUTHOR	: Zackary Hermsen
+// DATE		: 04-28-2015
+// FILE		: chapter_8_problem_14
+// COURSE	: CSCI 281, Section A
+// GOAL		: To complete problem 14.
+// PURPOSE	: To input a sentence and then have the sentence reversed.
+
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+int main()
+{
+	char sentence[70]; //sentence entered by the user
+	int i = 0; //counting variable
+	int size = 0; //size of the sentence
+	int j = 1; //incrementing variable
+	char c; //character variable
+	char tc; //terminating character
+
+	printf("\n Enter a sentence : ");
+
+	//putting the input into a character arrray
+	for(c = getchar(); (c != '.') && (c != '!') && (c != '?') && (c != '\n'); c = getchar(), i++)
+	{
+		sentence[i] = c;
+		size++;
+	}
+	
+	//defining the terminating character as the last input given
+	tc = c;
+
+	//declaring the null character
+	sentence[size] = '\0';
+
+	printf("\n Reversal of sentence : ");
+
+	//searching for the reverse of the sentence
+	for(i = size; i >= 0; i--)
+	{
+		if(sentence[i] == ' ' || i == 0)
+		{
+			//this is for the last word printed (the first word given), since there is no space before it, we have to hardcode it in.
+			if(i == 0)
+			{
+				i = -1;
+			}
+			//we look for spaces while travelling backwards through the given input.
+			//when a space is found, we set the array to i + j to print out the word after the space.
+			while(sentence[i + j] != ' ')
+			{
+				//this is for the case of the first word printed, since it continues until the null character...
+				//...instead of another space
+				if(sentence[i + j] == '\0')
+				{
+					break;
+				}
+				printf("%c", sentence[i + j]);
+				j++;
+			}
+			//setting j (the increment varialbe) back to 1 for the next iteration of the loop.
+			j = 1;
+			printf(" ");
+		}		
+	}
+
+
+	printf("\b%c", tc);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
+
+
+
+ 
