@@ -1,0 +1,29 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  03(Monday)-11(November)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_038_nested_loop_$$$$$_for
+// Goal		:  To complete Lab 38.
+// Purpose	:  To put a for loop with variable j inside of a for loop
+//				with variable i to print $$$$$.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	int j;
+
+	for(i = 1; i <= 10; i++)
+	{
+		for(j = 1; j <= 5; j++)
+		{
+			printf("$");
+		}
+		printf("\n");
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
