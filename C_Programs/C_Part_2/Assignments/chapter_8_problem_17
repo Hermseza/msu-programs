@@ -1,0 +1,91 @@
+// AUTHOR	: Zackary Hermsen
+// DATE		: 04-28-2015
+// FILE		: chapter_8_problem_17
+// COURSE	: CSCI 281, Section A
+// GOAL		: To complete problem 17.
+// PURPOSE	: To create a "magic square".
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+	
+	int n; // number entered by user
+	int magic[99][99];
+	int start;
+	int max;
+	int i, j;
+	int r, c; 
+	int next_r, next_c;
+
+    // Intro
+    printf("This program creates a magic sqaure of a size specified by you.\n");
+    printf("The size must be an odd number between 1 and 99.\n");
+
+    // Get the users magic number
+    printf("Enter the size of the magic square: ");
+    scanf_s("%d", &n);
+   
+    start = (n / 2); // The middle column
+    max = n * n; // The size
+    magic[0][start] = 1; // Place the number one in the middle of row 0
+
+    // Place numbers in the square
+    
+    for (i = 2, r = 0, c = start; i < max + 1; i++)
+	{
+        if ((r - 1) < 0) 
+		{
+            next_r = n - 1; 
+        }
+        else 
+		{
+			next_r = r - 1;
+		} 
+        
+
+        if ((c + 1) > (n - 1)) 
+		{ 
+            next_c = 0;                                  
+        }                                                                         
+        else 
+		{ 
+			next_c = c + 1; 
+		}                    
+                                                     
+
+        if (magic[next_r][next_c] > 0) 
+		{          
+            if (r > (n - 1)) 
+			{ 
+                next_r = 0;                               
+			}                                                                     
+			else
+			{                                                                
+                next_r = r + 1;                        
+                next_c = c;                        
+			}                                                                     
+        }      
+
+        r = next_r;                                                           
+        c = next_c;                                                           
+                      
+        magic[r][c] = i; // Put the current value in that position            
+    }                                                                             
+
+    // Printing the magic square
+	printf("\n\n");                                                                        
+    for (i = 0; i < n; i++) 
+	{                                                     
+        for (j = 0; j < n; j++) 
+		{                                                 
+            printf("%4d", magic[i][j]);                                           
+        }                                                                         
+        printf("\n");                                                             
+    }  
+	getchar();
+	getchar();
+
+    return 0;                                                                     
+}
