@@ -1,0 +1,29 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-10(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_2_problem_6
+// Goal		:  To complete problem 6 in chapter 2
+// Purpose	:  to revise problem 5 by changing the polynomial formula.
+
+#include <stdio.h>
+
+int main()
+{
+	int x;  //the input integer
+	int y;  //the formula we will be putting x into
+
+	//get input x
+	printf("Please enter a value for x : ");
+	scanf_s("%d", &x);
+
+	//put the inputted x into the formula
+	y = ((((3 * x + 2) * x - 5) * x - 1) * x + 7) * x - 6;
+	
+	//print results
+	printf("\nx = %d, y = %d", x, y);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
