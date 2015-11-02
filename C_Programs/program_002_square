@@ -1,0 +1,23 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  09(September)-15(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_002_square
+// Goal		:  To complete Lab 2.
+// Purpose	:  To use ints and assign variables.
+
+#include <stdio.h>
+
+int main()
+{
+	int side;
+	int area;
+	int perimeter;
+
+	printf("\n Please enter the side of a square : ");
+	scanf_s("%d", &side);
+	area = side * side;
+	perimeter = 4 * side;
+	printf("\n For a square with side %d, the area is %d, and the perimeter is %d", side, area, perimeter);
+	getchar();
+	getchar();
+	return 0;
