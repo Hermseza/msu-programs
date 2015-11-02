@@ -1,0 +1,34 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(Nobember)-05(Wednesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_042_number_of_digits_in_n
+// Goal		:  To complete Lab 42.
+// Purpose	:  To learn how to convert a word problem into a meaningful flowchart that is easy to create a program for.
+
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	int num_of_digits;
+	int backup_copy_of_n;
+	num_of_digits = 0;
+
+	printf("Please enter an integer : ");
+	scanf_s("%d", &n);
+
+	backup_copy_of_n = n;
+
+	while(n != 0)
+	{
+		n = n / 10;
+		num_of_digits++;
+	}
+
+	printf("\nThe number of digits in %d is %d.", backup_copy_of_n, num_of_digits);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
