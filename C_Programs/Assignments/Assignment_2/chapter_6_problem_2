@@ -1,0 +1,32 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  12(December)-01(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_6_problem_2
+// Goal		:  To complete problem 2 in chapter 6.
+// Purpose	:  To find the greatest common divisor of two factors.
+
+#include <stdio.h>
+
+int main()
+{
+	int m;
+	int n;
+	int remainder;
+
+	printf("\n Enter two integers : ");
+	scanf_s("%d %d", &m, &n);
+
+	while(n != 0)
+	{
+		remainder = m % n;
+		m = n;
+		n = remainder;
+	}
+
+	printf("\n Greatest common divisor : %d", m);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
