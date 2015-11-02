@@ -1,0 +1,37 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  10(October)-03(Friday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_012_IF_3_different_triangle_types
+// Goal		:  To complete Lab 12
+// Purpose	:  To see which kinds of triangles are made with the given inputs
+
+#include <stdio.h>
+
+int main()
+{
+	int a;
+	int b;
+	int c;
+
+	printf("\n Please enter three sides of a triangle : ");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	if
+		( (a == b) && (b == c) )
+	{
+		printf("\n The sides %d, %d, and %d form an Equilateral Triangle", a, b, c);
+	}
+	else
+		if
+			( (a == b) || (b == c) || (a == c) )
+		{
+			printf("\n The sides %d, %d, and %d form an Isosceles Triangle", a, b, c);
+		}
+		else
+		{
+			printf("\n The sides %d, %d, and %d form a Scalene Triangle", a, b, c);
+		}
+		getchar();
+		getchar();
+		return 0;
+}
