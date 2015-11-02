@@ -1,0 +1,36 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-18(Tuesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_049_array_average_of_5_numbers
+// Goal		:  To complete Lab 49
+// Purpose	:  To find the average of given inputs using an array
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	int a[5];
+	int sum = 0;
+	float avg;
+
+	for(i = 0; i <= 4; i++)
+	{
+		printf("\n Please enter element a[%d] : ", i);
+		scanf_s("%d", &a[i]);
+	}
+
+	for(i = 0; i <= 4; i++)
+	{
+		sum += a[i];
+	}
+
+	avg = (float) sum / 5;
+
+	printf("\n The average of the numbers you just entered is %.2f", avg);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
