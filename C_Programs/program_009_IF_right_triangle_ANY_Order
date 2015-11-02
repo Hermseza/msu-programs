@@ -1,0 +1,33 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  09(September)-29(Monday)-2014
+// Program	:  program_009_IF_right_triangle_ANY_Order
+// Course	:  Csci 180, Section A
+// Goal		:  To complete Lab 9, a program to input sides of a triangle in
+//				any order, and say if it is a right triangle or not
+// PURPOSE	:  To understand how to use the OR operator in C
+
+#include <stdio.h>
+
+int main()
+{
+	int a;  // First side of the triangle
+	int b;  // Second side of the triangle
+	int c;  // Third side of the triangle
+
+	printf("\n Please enter 3 sides of a triangle in any order : ");
+	scanf_s("%d %d %d", &a, &b, &c);
+
+	if
+		( (a*a + b*b == c*c) || (a*a + c*c == b*b) || (b*b + c*c == a*a) )
+	{
+		printf("\n The sides %d, %d, and %d form a right angled triangle", a, b, c);
+	}
+	else
+	{
+		printf("\n The sides %d, %d, and %d DO NOT form a right angled triangle", a, b, c);
+	}
+
+	getchar();
+	getchar();
+	return 0;
+}
