@@ -1,0 +1,30 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  09(September)-24(Wednesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_006_IF_odd_even
+// Goal		:  To complete Lab 6
+// Purpose	:  To write code for the first time, with an IF statement
+//				(Probably, the most important line in this file)
+
+#include <stdio.h>
+
+int main()
+{
+	int n;  // The number that I will be testing, to see if it is ODD or EVEN
+
+	printf("\n Please enter the number you want to test : ");  // Prompts the user for input
+	scanf_s("%d", &n);
+
+	if (n % 2 == 0)  // Determines whether the number is odd or even
+	{
+		printf("\n The number %d is EVEN", n);
+	}
+	else
+	{
+		printf("\n The number %d is ODD", n);
+	}
+
+	getchar();
+	getchar();
+	return 0;
+}
