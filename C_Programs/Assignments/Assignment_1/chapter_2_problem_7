@@ -1,0 +1,35 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-10(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_2_problem_7
+// Goal		:  To complete problem 7 in chapter 2
+// Purpose	:  To display the amount of $20, $10, $5, and $1 bills that can be made out of the given amount.
+
+
+#include <stdio.h>
+
+int main()
+{
+	int amount; //the input amount of money we will be converting
+
+	//get input from user
+	printf("Please enter a U.S. dollar amount : ");
+	scanf_s("%d", &amount);
+
+	//calculates and prints the number of $20 bills
+	printf("\n$20 bills: %d", amount / 20);
+
+	//calculates and prints the number of $10 bills
+	printf("\n$10 bills: %d", (amount % 20) / 10);
+
+	//calculates and prints the number of $5 bills
+	printf("\n$5 bills: %d", ((amount % 20) % 10) / 5);
+
+	//calculates and prints the number of $1 bills
+	printf("\n$1 bills: %d", (((amount % 20) % 10) % 5));
+
+	getchar();
+	getchar();
+
+	return 0;
+}
