@@ -1,0 +1,83 @@
+// AUTHOR	: Zackary Hermsen
+// DATE		: 04-28-2015
+// FILE		: chapter_8_problem_16
+// COURSE	: CSCI 281, Section A
+// GOAL		: To complete problem 16.
+// PURPOSE	: To see if two input words are anagrams.
+
+#include <stdio.h>
+#include <string.h>
+
+int is_anagram(char a[], char b[]);
+
+int main()
+{
+	char word1[70];
+	char word2[70];
+	int condition;
+
+	printf("\n Enter first word : ");
+	gets_s(word1);
+
+	printf("\n Enter second word : ");
+	gets_s(word2);
+
+	if ( strlen(word1) != strlen(word2) )
+	{
+		printf("\n The words are not anagrams.");
+
+		getchar();
+		getchar();
+
+		return 0;
+	}
+
+	condition = is_anagram(word1, word2);
+
+	if ( condition == 1 )
+	{
+		printf("\n The words are anagrams.");
+	}
+	else
+	{
+		printf("\n The words are not anagrams.");
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
+
+int is_anagram(char a[], char b[])
+{
+	int first[26] = {0};
+	int second[26] = {0};
+	int i = 0;
+
+	while ( a[i] != '\0' )
+	{
+		first[a[i] - 'a']++;
+		i++;
+	}
+
+	i = 0;
+
+	while ( b[i] != '\0' )
+	{
+		second[b[i] - 'a']++;
+		i++;
+	}
+
+	for ( i = 0; i <= 26; i++)
+	{
+		if ( first[i] != second[i] )
+		{
+			return 0;
+		}
+		else
+		{
+			return 1;
+		}
+	}
+}
