@@ -1,0 +1,37 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-04(Tuesday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_042_$_$$_to_$$$$$$$$$$_do_while
+// Goal		:  To complete Lab 42
+// Purpose	:  To use a do while loop inside of a do while loop to display a $ where j = i.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	int j;
+
+	i = 1;
+
+	do
+	{
+		j = 1;
+
+		do
+		{
+			printf("$");
+			j++;
+		}
+		while(j <= i);
+
+		printf("\n");
+		i++;
+	}
+	while(i <= 10);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
