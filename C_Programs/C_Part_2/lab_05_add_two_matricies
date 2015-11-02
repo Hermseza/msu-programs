@@ -1,0 +1,58 @@
+// AUTHOR	:  Zackary Hermsen
+// DATE		:  02/26/15
+// Course	:  Csci 281, Section A
+// File		:  lab_05_add_two_matricies
+// Goal		:  To complete Lab 5
+// Purpose	:  To understand the concept of 2-D arrays, and to add two matricies together.
+
+#include <stdio.h>
+
+void print_matrix(int A[3][3]);
+
+int main()
+{
+	int i; // Row Number
+	int j; // Column Number
+
+	int A[3][3] = { {1,1,1}, {1,1,1}, {1,1,1} };
+	int B[3][3] = { 2,2,2,2,2,2,2,2,2 };
+	int C[3][3];
+
+	for(i = 0; i <= 2; i++)
+	{
+		for(j = 0; j <= 2; j++)
+		{
+			C[i][j] = A[i][j] + B[i][j]; 
+		}
+	}
+
+	printf("\nThe first input matrix is as follows : ");
+	print_matrix(A);
+
+	printf("\nThe second input matrix is as follows : ");
+	print_matrix(B);
+
+	printf("\nThe result input matrix is as follows : ");
+	print_matrix(C);
+
+	getchar();
+	getchar();
+	
+	return 0;
+}
+
+void print_matrix(int A[3][3])
+{
+	int i;
+	int j;
+
+	for (i = 0; i <= 2; i++)
+	{
+		printf("\n");
+
+		for (j = 0; j <= 2; j++)
+		{
+			printf("%5d", A[i][j]);
+		}
+	}
+}
