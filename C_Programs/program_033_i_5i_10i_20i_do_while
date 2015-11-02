@@ -1,0 +1,26 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  10(October)-31(Friday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_033_i_5i_10i_20i_do_while
+// Goal		:  To complete Lab 33.
+// Purpose	:  To use a do while loop to display i, 5i, 10i, and 20i.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	i = 1;
+
+	do
+	{
+		printf("%5d %5d %5d %5d \n", i, 5 * i, 10 * i, 20 * i);
+		i++;
+	}
+	while(i <= 10);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
