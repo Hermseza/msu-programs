@@ -1,0 +1,75 @@
+// AUTHOR	:	Zackary Hermsen
+// DATE		:	02/19/2015
+// Course	:	Csci 281, Section A
+// File		:	lab_04_call_by_value_call_by_reference
+// Goal		:	To complete Lab 4.
+// Purpose	:	To see the difference between call by value and call by reference.
+
+#include <stdio.h>
+
+void magnify_values(int a, int b, int c, int magnify_factor);
+
+void magnify_array_values(int a[], int n, int magnify_factor);
+
+void print_array_values(int a[], int n);
+
+int main()
+{
+	int x = 10;
+	int y = 20;
+	int z = 30;
+
+	printf("\n BEFORE:   x = %d, y = %d, z = %d", x, y, z);
+	
+	magnify_values(x, y, z, 2);
+
+	printf("\n AFTER :   x = %d, y = %d, z = %d", x, y, z);
+
+	printf("\n");
+
+	int a[5] = { 10, 20, 30, 40, 50 };
+
+	printf("\n BEFORE changing array values");
+
+	print_array_values(a, 5);
+
+	magnify_array_values(a, 5, 2);
+
+	printf("\n");
+
+	printf("\n AFTER changing array values");
+
+	print_array_values(a, 5);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
+
+void magnify_values(int a, int b, int c, int magnify_factor)
+{
+	a = a * magnify_factor;
+	b = b * magnify_factor;
+	c = c * magnify_factor;
+}
+
+void print_array_values(int a[], int n)
+{
+	int i;
+	printf("\n The values of the array are : ");
+	for(i = 0; i <= n - 1; i++)
+	{
+		printf("%5d", a[i]);
+	}
+	return;
+}
+
+void magnify_array_values(int a[], int n, int magnify_factor)
+{
+	int i;
+	for(i = 0; i <= n - 1; i++)
+	{
+		a[i] = a[i] * magnify_factor;
+	}
+}
