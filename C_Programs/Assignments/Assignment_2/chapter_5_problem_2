@@ -1,0 +1,31 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-17(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_5_problem_2
+// Goal		:  To complete Problem 2 in Chapter 5
+// Purpose	:  To convert a given input from 24 hour time to 12 hour time.
+
+#include <stdio.h>
+
+int main()
+{
+	int n;
+	int m;
+
+	printf("\nEnter a 24-hour time : ");
+	scanf_s("%d:%d", &n, &m);
+
+	if(n > 12)
+	{
+		printf("\nEquivalent 12-hour time : %d:%d PM", n - 12, m);
+	}
+	else
+	{
+		printf("\nEquivalent 12-hour time : %d:%d AM", n, m);
+	}
+
+	getchar();
+	getchar();
+
+	return 0;
+}
