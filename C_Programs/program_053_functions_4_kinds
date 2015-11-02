@@ -1,0 +1,56 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  12(December)-01(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_053_functions_4_kinds
+// Goal		:  To complete Lab 53.
+// Purpose	:  To understand the 4 kinds of functions in C.
+
+#include <stdio.h>
+
+void print_welcome_message();
+int get_number_from_user();
+void print_square_of_number(int );
+int get_cube_of(int crazy);
+
+int main()
+{
+	int x;
+	int y;
+
+	print_welcome_message();
+	x = get_number_from_user();
+	print_square_of_number(x);
+	y = get_cube_of(x);
+
+	printf("\n The cube of %d is %d", x, y);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
+
+void print_welcome_message()
+{
+	printf("\n Welcome to my fun program");
+	printf("\n We will explore functions");
+}
+
+int get_number_from_user()
+{
+	int a;
+	printf("\n Please enter an integer : ");
+	scanf_s("%d", &a);
+
+	return a;
+}
+
+void print_square_of_number(int m)
+{
+	printf("\n The square of %d is %d", m, m*m);
+}
+
+int get_cube_of(int p)
+{
+	return p * p * p;
+}
