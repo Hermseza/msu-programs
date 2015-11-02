@@ -1,0 +1,49 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  11(November)-17(Monday)-2014
+// Course	:  Csci 180, Section A
+// File		:  chapter_5_problem_5
+// Goal		:  To complete Problem 5 in Chapter 5
+// Purpose	:  To calculate the tax due from a given income.
+
+#include <stdio.h>
+
+int main()
+{
+	float income;
+	float tax;
+
+	printf("\nPlease enter income : $");
+	scanf_s("%f", &income);
+
+	if(income < 750)
+	{
+		tax = income * .01;
+	}
+	else if(income < 2250)
+	{
+		tax = 7.5 + ((income - 750) * .02);
+	}
+	else if(income < 3750)
+	{
+		tax = 37.5 + ((income - 2250) * .03);
+	}
+	else if(income < 5250)
+	{
+		tax = 82.5 + ((income - 3750) * .04);
+	}
+	else if(income < 7000)
+	{
+		tax = 142.5 + ((income - 5250) * .05);
+	}
+	else
+	{
+		tax = 230 + ((income - 7000) * .06);
+	}
+
+	printf("\nTax due : $%.2f", tax);
+
+	getchar();
+	getchar();
+
+	return 0;
+}
