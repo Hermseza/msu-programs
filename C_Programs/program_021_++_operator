@@ -1,0 +1,24 @@
+// AUTHOR	:  Zack Hermsen
+// DATE		:  10(October)-24(Friday)-2014
+// Course	:  Csci 180, Section A
+// File		:  program_021_++_operator
+// Goal		:  To complete Lab 21.
+// Purpose	:  To use and understand the new ++ operator.
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+
+	for (i = 1; i <= 10; i++)
+	{
+		printf("%d", i);
+		printf("\n");
+	}
+
+	getchar();
+	getchar();
+	
+	return 0;
+}
