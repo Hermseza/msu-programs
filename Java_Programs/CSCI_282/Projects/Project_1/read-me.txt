@@ -1,0 +1,18 @@
+read-me.txt
+
+Included in the zip file are:
+
+1. All of the .java files (EncryptViewer, Encrypt, EncryptComponent).
+
+2. A Runnable .jar file of the program.
+
+This program was created in Eclipse: MARS
+
+Warnings/errors
+
+When the third input digit is a 3, the first number to be displayed in "Encoded Integer: " (which is supposed
+to be a 0) is not displayed.
+
+When all of the inputs are 3, the Encoded Integer is 0.
+
+The "Decoded Integer" does not display leading 0's, ex: 0011 is only displayed as 11.
