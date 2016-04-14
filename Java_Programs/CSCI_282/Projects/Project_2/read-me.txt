@@ -1,0 +1,15 @@
+read-me.txt
+
+Included in the zip file are:
+
+1. All of the .java files (CharacterCountViewer, CharacterCount).
+
+2. A Runnable .jar file of the program.
+
+3. An input and output text file that can be used with the program.
+
+This program was created in Eclipse: MARS
+
+Warnings/errors
+
+None.
