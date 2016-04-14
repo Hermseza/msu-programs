@@ -1,7 +1,7 @@
 /**
  * Filename		: SequenceViewer.java
- * Purpose		: To create a class that creates an sequence and methods to create 
- * 					new sequences from the original.
+ * Purpose		: To create a class that calls the component to the frame to display
+ * 					the newly created sequences.
  * Author		: Zackary Hermsen
  * School		: McNeese State University
  * email		: hermseza@gmail.com
@@ -9,7 +9,7 @@
  * Due Date		: 10/08/2015
  * Compiler		: Eclipse
  * Executable	: SequenceViewer.jar
- * History		: Z.A.H : 10/06/2015 : Program Genesis 
+ * History		: Z.A.H : 10/06/2015 : Program Genesis
  * 				: Z.A.H : 10/07/2015 : Added the SequenceComponent class to draw the arrays
  * 						to a frame instead of printing on the console. 
  */
@@ -17,87 +17,35 @@
 
 package arrayListPackage;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import javax.swing.JFrame;
 
-public class Sequence 
-{
-	//instance field
-    private ArrayList <Integer> values;
-    private int i;
-    private int j;
-    
-    //constructor to assign values to the array list
-    public Sequence() 
-    {
-    	values = new ArrayList<Integer>(); 
-    }
-    
-    //a method to add elements to the array list
-    public void add(int n) 
-    { 
-    	values.add(n); 
-    }
-    
-    //a method to convert the elements of the array list to a string
-    public String toString() 
-    { 
-    	return values.toString(); 
-    }
-    
-	public Integer get(int i) 
+public class SequenceViewer {
+
+	public static void main(String[] args) 
 	{
-		return values.get(i);
+		// TODO Auto-generated method stub
+		//create the first arraylist used for testing, called first
+		Sequence first = new Sequence();
+		first.add(1);
+		first.add(4);
+		first.add(9);
+		first.add(16);
+		
+		//create the second arraylist for testing, called second
+		Sequence second = new Sequence();
+		second.add(9);
+		second.add(7);
+		second.add(4);
+		second.add(9);
+		second.add(11);
+		
+		//create a new frame
+		JFrame frame = new JFrame("Array List Methods");
+		frame.setSize(500, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//add the Sequence component
+		SequenceComponent component = new SequenceComponent(first, second);
+		frame.add(component);
+		frame.setVisible(true);
 	}
-
-    //a method to create a new list by appending the new sequence to the old one
-    public Sequence append(Sequence other)
-    {
-    	Sequence appended = new Sequence();
-    	
-    	for(i = 0; i < values.size(); i++)
-    	{
-    		appended.add(values.get(i));
-    	}
-    	for(j = 0; j < other.values.size(); j++)
-    	{
-    		appended.add(other.get(j));
-    	}
-    	return appended;
-    }
-    
-    //a method to merge two sequences in an alternating pattern
-    public Sequence merge(Sequence other)
-    {
-    	Sequence merged = new Sequence();
-    	
-    	for(i = 0; i < values.size(); i++)
-    	{
-    		merged.add(values.get(i));
-    		merged.add(other.get(i));
-    	}
-    	//append the rest of other if b > a to merged
-    	if(other.values.size() > values.size())
-    	{
-    		j = 0;
-    		while(j < (other.values.size() - values.size()))
-    		{
-    			merged.add(other.get(j+values.size()));
-    			j++;
-    		}
-    	}
-    	return merged;
-    }
-    
-    //a method to merge two sorted sequences
-    public Sequence mergeSorted(Sequence other)
-    {
-    	Sequence mergeSorted = new Sequence();
-
-    	mergeSorted.values.addAll(values);
-    	mergeSorted.values.addAll(other.values);
-    	Collections.sort(mergeSorted.values);
-
-    	return mergeSorted;
-    }
 }
